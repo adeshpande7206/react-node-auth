@@ -1,9 +1,9 @@
-import './App.css';
+import Signin from "./Auth/Signin";
 
 function App() {
   return (
     <div className="App">
-      App
+      <Signin />
     </div>
   );
 }
