@@ -1,0 +1,185 @@
+.formOuter {
+  width: 320px;
+  margin: 3em auto;
+}
+
+.formOuter a {
+  color: #666;
+}
+
+.formOuter a:hover {
+  color: #4fda8c;
+}
+
+.logoWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.logoWrapper img {
+  width: 85px;
+}
+
+.formWrap {
+  background-color: #fff;
+  width: 320px;
+  margin: 3em auto;
+  box-shadow: 0px 1px 8px #bebebe;
+  -webkit-box-shadow: 0px 1px 8px #bebebe;
+  -moz-box-shadow: 0px 1px 8px #bebebe;
+}
+.formWrap .tabs {
+  overflow: hidden;
+}
+
+.formWrap .tabs button {
+  width: 50%;
+  font-size: 1rem;
+  padding: 0.75em 0.5em;
+  text-align: center;
+  font-weight: 400;
+  background-color: #e6e7e8;
+  color: #666;
+  border: none;
+  cursor: pointer;
+}
+.formWrap .tabs button.active {
+  background-color: #fff;
+}
+.formWrap .tabsContent {
+  padding: 1.5em;
+}
+.formWrap .tabsContent div[id$="tab-content"] {
+  display: none;
+}
+.formWrap .tabsContent .active {
+  display: block !important;
+}
+.formWrap form .input {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: inherit;
+  font-family: inherit;
+  padding: 0.8em 0 10px 0.8em;
+  border: 1px solid #cfcfcf;
+  outline: 0;
+  display: inline-block;
+  margin: 0 0 0.8em 0;
+  padding-right: 2em;
+  width: 100%;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1rem;
+  padding: .8em;
+  background-color: #28a55f;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.button:hover {
+  background-color: #4fda8c;
+}
+.formWrap form .checkbox {
+  visibility: hidden;
+  padding: 20px;
+  margin: 0.5em 0 1.5em;
+}
+.formWrap form .checkbox:checked + label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+.formWrap form label[for] {
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.formWrap form label[for]:before {
+  content: "";
+  position: absolute;
+  border: 1px solid #cfcfcf;
+  width: 17px;
+  height: 17px;
+  top: 0px;
+  left: -14px;
+}
+.formWrap form label[for]:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 5px;
+  background-color: transparent;
+  top: 4px;
+  left: -10px;
+  border: 3px solid #28a55f;
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.formWrap .helpText {
+  margin-top: 0.6em;
+}
+.formWrap .helpText p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.load {
+  display: none;
+  width: 30px;
+  height: 30px;
+  border: 5px solid #fff;
+  border-radius: 100%;
+}
+
+.open {
+  border-top: 5px solid transparent;
+  -webkit-animation: load-animate infinite linear 1s;
+          animation: load-animate infinite linear 1s;
+}
+
+.hideDisplay {
+  display: none;
+}
+
+.showDisplay {
+  display: inline-block;
+}
+
+@-webkit-keyframes load-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 0.35;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes load-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 0.35;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
