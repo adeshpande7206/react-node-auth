@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import styles from "./Auth.module.css";
+import { Link } from "react-router-dom";
 
 const Signin = () => {
   const [loginDetails, setLoginDetails] = useState({
@@ -39,14 +40,12 @@ const Signin = () => {
         />
         <button type="submit" className={styles.button}>
           <span>Sign In</span>
-          <span
-            className={`${styles.load} ${styles.open}`}
-          ></span>
+          <span className={`${styles.load} ${styles.open}`}></span>
         </button>
       </form>
       <div className={styles.helpText}>
         <p>
-          <a href="/">Forget your password?</a>
+          <Link to="/">Forget your password?</Link>
         </p>
       </div>
     </div>
