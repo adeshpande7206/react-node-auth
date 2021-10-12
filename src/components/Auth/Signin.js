@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import styles from "./Auth.module.css";
+import "./Signin.css";
 
 const Signin = () => {
   const [loginDetails, setLoginDetails] = useState({
@@ -17,7 +18,7 @@ const Signin = () => {
   };
 
   return (
-    <div>
+    <div className="sign-in_main">
       <form className={styles.loginForm} onSubmit={handleSubmit}>
         <input
           type="email"
@@ -39,14 +40,14 @@ const Signin = () => {
         />
         <button type="submit" className={styles.button}>
           <span>Sign In</span>
-          <span
-            className={`${styles.load} ${styles.open}`}
-          ></span>
+          <span className={`${styles.load} ${styles.open}`}></span>
         </button>
       </form>
       <div className={styles.helpText}>
         <p>
-          <a href="/">Forget your password?</a>
+          <a className="forget-password" href="/">
+            Forget your password?
+          </a>
         </p>
       </div>
     </div>
