@@ -1,9 +1,14 @@
-import Signin from "./Auth/Signin";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Auth from "./Auth/Auth";
 
 function App() {
   return (
     <div className="App">
-      <Signin />
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Auth} />
+        </Switch>
+      </Router>
     </div>
   );
 }
