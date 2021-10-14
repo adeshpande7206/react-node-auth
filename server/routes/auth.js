@@ -28,9 +28,7 @@ router.post("/signup", async (req, res) => {
     // Create and assign a token
     const token = jwt.sign({ _id: user._id }, process.env.SECRET_TOKEN);
 
-    res
-      .header("auth-token", token)
-      .send({ savedUser: savedUser._id, token: token });
+    res.header("auth-token", token).send({ user: savedUser._id, token: token });
   } catch (err) {
     res.status(400).send(err);
   }

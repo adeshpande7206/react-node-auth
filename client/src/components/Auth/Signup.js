@@ -1,4 +1,5 @@
 import { useState } from "react";
+import authAPI from "../../api/authAPI";
 
 // CSS Import
 import styles from "./Auth.module.css";
@@ -14,9 +15,20 @@ const Signup = () => {
     setSignupDetails({ ...signupDetails, [e.target.name]: e.target.value });
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    const result = await authAPI.post("user/signup/", signupDetails, config);
+    console.log(result);
+  };
+
   return (
     <div id="signup-tab-content" className={styles.active}>
-      <form className={styles.signupForm}>
+      <form onSubmit={handleSubmit} className={styles.signupForm}>
         <input
           name="email"
           type="email"
